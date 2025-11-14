@@ -93,14 +93,14 @@ const CustomizedDot = (
   return (
     <g>
       {/* Main dot */}
-      <circle cx={cx} cy={cy} r={9} fill={stroke} />
+      <circle cx={cx} cy={cy} r={16} fill={stroke} />
       <text
         className="dark:text-black text-white"
         x={cx}
         y={cy}
         textAnchor="middle"
         dy={8}
-        fontSize={8}
+        fontSize={12}
         fontWeight={600}
         fill="currentColor"
         transform="translate(0, -5)"
