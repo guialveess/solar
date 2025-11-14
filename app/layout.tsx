@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SunTracker IoT - Monitoramento Solar",
+  title: "Solar",
   description:
     "Sistema de rastreamento solar inteligente com ESP32 e monitoramento em tempo real",
 };
