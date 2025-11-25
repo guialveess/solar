@@ -56,7 +56,7 @@ export function Component() {
   };
 
   return (
-    <div className="py-6 w-full max-w-2xl">
+    <div className="w-full max-w-2xl">
       <ShowMore onChange={setIsExpanded} isSelected={isExpanded}>
         <motion.div
           initial={false}
