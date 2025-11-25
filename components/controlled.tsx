@@ -4,19 +4,19 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
 import { ShowMore } from "@/components/ui/show-more";
 import { SolarPanelCard } from "@/components/solarpanelpainel";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
 export function Component() {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, height: 0 },
     visible: {
       opacity: 1,
       height: "auto",
       transition: {
         duration: 0.3,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
         staggerChildren: 0.1,
       },
     },
@@ -25,12 +25,12 @@ export function Component() {
       height: 0,
       transition: {
         duration: 0.2,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: {
       opacity: 0,
       y: 20,
@@ -42,7 +42,7 @@ export function Component() {
       scale: 1,
       transition: {
         duration: 0.4,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
     exit: {
@@ -84,16 +84,6 @@ export function Component() {
                   description: "Posição: Telhado principal",
                   batteryPercentage: 85,
                   productionKwh: 12,
-                },
-                {
-                  title: "Painel Solar 2",
-                  description: "Posição: Lateral esquerda",
-                  batteryPercentage: 92,
-                },
-                {
-                  title: "Painel Solar 3",
-                  description: "Posição: Fundo do quintal",
-                  batteryPercentage: 78,
                 },
               ].map((panel, index) => (
                 <motion.div key={index} variants={itemVariants} layout>
